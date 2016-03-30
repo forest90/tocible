@@ -88,8 +88,12 @@
 						window.location.hash = href;
 						$(window).scrollTop(winTop);
 					}
-					}		  
-					$('html, body').stop(true).animate({scrollTop:offset.top - 10}, opts.speed);
+					}	
+                                        offsetAnchror = opts.offsetAnchror
+					if(!offsetAnchror){
+						offsetAnchror = 10;
+					}
+					$('html, body').stop(true).animate({scrollTop:offset.top - offsetAnchror}, opts.speed);
 				});
 				
 			});
