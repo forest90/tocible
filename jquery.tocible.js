@@ -135,7 +135,7 @@
 					target = $('.tocible li').eq(index),
 					winTop = $(window).scrollTop();
 			
-					if(winTop >= elTop - 20){
+					if(winTop >= elTop - 20  - opts.offsetAnchror){
 						target.addClass('toc_scrolled').siblings().removeClass('toc_scrolled');
 						if(opts.collapsible){
 							target.siblings().filter('.tocible_subheading').hide();
